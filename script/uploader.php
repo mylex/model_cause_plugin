@@ -35,7 +35,6 @@
 
         // For Upload New Spot Media
         function uploaderNew(id, j){
-            //for(var j= 1; j<=count; j++){
                 jQuery('#spot_upload_btn_'+id+'_'+j).click(function(e) {
                     e.preventDefault();
                     var setField = jQuery(this).attr('counter');
@@ -55,6 +54,5 @@
                         jQuery('#'+setField).val(image_url);
                     });
                 });
-           // }
         }
 </script>

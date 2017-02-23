@@ -2,7 +2,7 @@
 
 // add boxe information to post
 function add_spot_spot_information_box(){
-    add_meta_box('spot_information', 'Add Model Cause Spot Information','spot_information_box','model_cause');
+    add_meta_box('spot_information', 'Add Model Cause Spot Information','spot_information_box','model_cause', 'high');
 }
 add_action('add_meta_boxes', 'add_spot_spot_information_box');
 
@@ -152,7 +152,7 @@ function spot_information_box($post){
         }else{
             size_of_pos = 0;
         }
-		console.log('Size of POS :' + size_of_pos);
+		//console.log('Size of POS :' + size_of_pos);
 
         var cPF = size_of_pos;
         if(size_of_pos != 0){
@@ -176,7 +176,7 @@ function spot_information_box($post){
         //Remove Spot Image
         function removeSpotImage(i, j){
             jQuery('#delete_spot_img_'+i+'_'+j).click(function(){
-                console.log('Execute Image Remover');
+                //console.log('Execute Image Remover');
                 //jQuery(this).parent('.place-form').remove();
                 var retVal = confirm("Do you want to continue ?");
                 if( retVal == true ){
@@ -221,7 +221,3 @@ add_action('save_post', 'save_information');
 
 include( PLUGIN_ROOT_DIR . 'helper/short_code_helper.php');
 include( PLUGIN_ROOT_DIR . 'helper/caption_fetcher.php');
-
-function getMultiLang_InformationTitle($string){
-    return $string;
-}

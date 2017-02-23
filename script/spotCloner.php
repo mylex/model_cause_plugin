@@ -13,6 +13,7 @@
                 var fieldset = jQuery(this).parent('.article-places');
                 var placeForm =  fieldset.find('.place-form:last-child');
 				placeFormTemplate.find('textarea').text(''); // Newly Add
+                placeFormTemplate.find('iframe.embed_map').remove();
 				placeFormTemplate.find('.marker-parent').html('');
 				//placeFormTemplate.appendTo('.place-form:last-child');
                 var newPlaceForm = placeFormTemplate.clone();
@@ -63,7 +64,7 @@
                 removeSpotImage(countPlaceForm, 1);
                 //uploaderSelf(countPlaceForm);
                 jQuery('#remove_spot_'+countPlaceForm).click(function(){
-					console.log('Execute first');
+					//console.log('Execute first');
                     //jQuery(this).parent('.place-form').remove();
 					var retVal = confirm("Are you sure! You want to Remove This Spot?");
 					if( retVal == true ){
@@ -76,7 +77,7 @@
             }); // Articlae Place Add End
 
            jQuery('.remove_spot').click(function(){
-				console.log('Execute Second');
+				//console.log('Execute Second');
                 //jQuery(this).parent('.place-form').remove();
 			    var retVal = confirm("Do you want to continue ?");
 			    if( retVal == true ){

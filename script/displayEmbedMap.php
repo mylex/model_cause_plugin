@@ -7,10 +7,12 @@
                 var source = '';
                 if(fromMaualLinkMap != '' || fromMaualLinkMap.length > 0){
                     source = fromMaualLinkMap + '&output=embed';
-                }else{
+                }else if(fromAddressMap != '' || fromAddressMap.length > 0){
                    source = 'https://maps.google.com/maps?&q=' + encodeURIComponent(fromAddressMap) + '&output=embed';
                 }
-                var embed ="<iframe width='300' height='200' class='embed_map' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='"+ source +"'></iframe>";
+                if(source != ''){
+                    var embed ="<iframe width='300' height='200' class='embed_map' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'   src='"+ source +"'></iframe>";
+                }
                 jQuery(this).parent('div').append(embed);       
             });
         }

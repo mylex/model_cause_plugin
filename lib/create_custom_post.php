@@ -29,7 +29,8 @@
   		'description'         => __( 'Model Cuase Custom Post', 'twentythirteen' ),
   		'labels'              => $labels,
   		// Features this CPT supports in Post Editor
-  		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+  		//'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', ),  
   		// You can associate this CPT with a taxonomy or custom taxonomy.
   		'taxonomies'          => array( 'modelCause' ),
   		/* A hierarchical CPT is like Pages and can have

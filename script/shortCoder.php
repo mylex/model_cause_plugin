@@ -1,5 +1,4 @@
 <script type="text/javascript">
-
         //Call This Function By Loop
         function add_short_code(id){
             // For Add Short Code
@@ -21,7 +20,7 @@
             });
             // Delete Function
             jQuery('#delete_spot_'+id).click(function(){
-                console.log('Execute outside');
+                //console.log('Execute outside');
                 //jQuery(this).parent('.place-form').remove();
                 var retVal = confirm("Are you sure! You want to Remove This Spot?");
                 if( retVal == true ){
