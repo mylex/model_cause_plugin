@@ -2,7 +2,7 @@
 
 // add boxe information to post
 function add_spot_spot_information_box(){
-    add_meta_box('spot_information', 'Add Model Cause Spot Information','spot_information_box','model_cause', 'high');
+    add_meta_box('spot_information', 'Add Model Cause Spot Information','spot_information_box','model_cause','advanced','high');
 }
 add_action('add_meta_boxes', 'add_spot_spot_information_box');
 
