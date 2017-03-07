@@ -14,11 +14,13 @@ function create_shortcode_information($atts,$content=null){
 
     $html .= '
         <div class="model_clause">
+          <div class="spot_area">
             <div class="spot_no">'.base64_decode($information[$id]["spot_no"]).'</div>
             <div class="spot_title">'.base64_decode($information[$id]["spot_title"]).'</div>
-            <div class="spot_thumbimg"><img src="'.base64_decode($information[$id]["spot_thumbimg"]).'"></div>
             <div class="spot_address">'.base64_decode($information[$id]["spot_address"]).'</div>
-            <div class="spot_maplink"><a href="'.base64_decode($information[$id]["spot_maplink"]).'">View Map</a></div>';
+            <div class="spot_maplink"><a href="'.base64_decode($information[$id]["spot_maplink"]).'">View Map</a></div>
+          </div>
+          <div class="spot_thumbimg"><img src="'.base64_decode($information[$id]["spot_thumbimg"]).'"></div>';
             if(!empty($information[$id]["spot_image"])){
                 $html .= '<div class="spot_Image">';
                 foreach ($information[$id]["spot_image"] as $spotImage) {
